@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+/* ================================================
+   RESET Y CONFIGURACIÓN BÁSICA
+   ================================================ */
+
+/* Reinicia márgenes, rellenos y el box model para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita que padding y border aumenten el tamaño total */
+}
+
+/* Suaviza el desplazamiento al navegar entre secciones */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Configuración general del cuerpo del sitio */
+body {
+    font-family: "Quicksand", sans-serif; /* Fuente limpia */
+    line-height: 1.8; /* Altura de línea para mejorar legibilidad */
+    color: #444; /* Texto gris oscuro */
+    background-color: #F9F9F9; /* Fondo gris claro suave */
+}
+
+/* ================================================
+   HEADER - Minimalista
+   ================================================ */
+
+/* Contenedor del encabezado */
+header {
+    background-color: #E8E4F3; /* Lavanda pastel */
+    padding: 3rem 0; /* Espaciado vertical */
+    text-align: center; /* Centra texto e items */
+    border-bottom: 1px solid #D8D4E3; /* Línea sutil inferior */
+}
+
+/* Título principal */
+header h1 {
+    font-size: 2.5rem; /* Tamaño grande */
+    font-weight: 300; /* Estilo ligero para look minimalista */
+    color: #6B6B6B; /* Gris suave */
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+/* Lista del menú de navegación */
+nav ul {
+    list-style: none; /* Sin viñetas */
+    margin-top: 1.5rem; /* Separación respecto al título */
+}
+
+/* Enlaces del menú */
+nav a {
+    color: #888; /* Gris suave */
+    text-decoration: none; /* Quita subrayado */
+    font-weight: 300; /* Ligero */
+    font-size: 1rem;
+    padding: 0.5rem 1rem; /* Espaciado clickeable */
+    transition: color 0.3s ease; /* Suaviza el hover */
+}
+
+/* Efecto al pasar el mouse */
+nav a:hover {
+    color: #B4A7D6; /* Lavanda más fuerte */
+}
+
+/* ================================================
+   MAIN - Contenido Principal
+   ================================================ */
+
+/* Contenedor general del contenido principal */
+main {
+    max-width: 1100px; /* Ancho máximo para lectura óptima */
+    margin: 20px auto; /* Centrado horizontal y margen superior/inferior */
+    padding: 0 2rem; /* Espaciado lateral */
+}
+
+/* ================================================
+   SECCIÓN INTRODUCCIÓN - Minimalista
+   ================================================ */
+
+/* Contenedor de la introducción */
+.intro-mascotas {
+    padding: 10px 0;
+    margin-bottom: 30px; /* Separación respecto a siguiente sección */
+    text-align: center;
+    border-bottom: 1px solid #E5E5E5; /* Línea inferior sutil */
+}
+
+/* Párrafo principal de presentación */
+.intro-mascotas p {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 300; /* Ligero */
+    max-width: 700px; /* Evita textos muy largos */
+    margin: 0 auto; /* Centrado */
+}
+
+/* ================================================
+   GALERÍA DE MASCOTAS - Grid Minimalista
+   ================================================ */
+
+/* Grid que contiene todos los elementos mascota */
+.galeria-mascotas {
+    display: grid; /* Activa Grid Layout */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    gap: 2.5rem; /* Separación entre tarjetas */
+    margin-bottom: 4rem;
+}
+
+/* Cada tarjeta de mascota */
+.mascota {
+    background-color: white;
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden; /* Evita desbordes de la imagen */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* Sombra suave */
+    transition: all 0.3s ease; /* Suaviza hover */
+    border: 1px solid #E8E4F3; /* Borde lavanda claro */
+}
+
+/* Efecto flotante al pasar el mouse */
+.mascota:hover {
+    transform: translateY(-8px); /* Levanta la tarjeta */
+    box-shadow: 0 8px 20px rgba(155, 139, 196, 0.15); /* Sombra más profunda */
+}
+
+/* Imágenes dentro de las tarjetas */
+.mascota img {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 300px; /* Altura uniforme */
+    object-fit: cover; /* Asegura que no se deforme */
+    display: block; /* Quita espacios fantasma */
+}
+
+/* Contenedor de texto debajo de la imagen */
+figcaption {
+    padding: 1.8rem 1.5rem;
+    text-align: center;
+    background-color: #FAFAFA; /* Gris casi blanco */
+}
+
+/* Nombre de la mascota */
+figcaption h3 {
+    color: #9B8BC4; /* Lavanda suave */
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500; /* Semibold para destacar */
+}
+
+/* Descripción de la mascota */
+figcaption p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* ================================================
+   SECCIÓN VOLVER - Minimalista
+   ================================================ */
+
+/* Contenedor del botón volver */
+.volver {
+    text-align: center;
+    margin: 4rem 0;
+    padding-top: 2rem;
+    border-top: 1px solid #E5E5E5;
+}
+
+/* Estilo del botón volver */
+.btn-volver {
+    display: inline-block;
+    background-color: transparent;
+    color: #9B8BC4;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 300;
+    border: 1px solid #9B8BC4;
+    border-radius: 3px;
+    transition: all 0.3s ease; /* Hover suave */
+}
+
+/* Hover del botón volver */
+.btn-volver:hover {
+    background-color: #9B8BC4; /* Rellena con lavanda */
+    color: white;
+}
+
+/* ================================================
+   FOOTER - Minimalista
+   ================================================ */
+
+/* Pie de página general */
+footer {
+    background-color: transparent; /* Sin color */
+    color: #999;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid #E5E5E5;
+}
+
+/* Texto del footer */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- Declaración del tipo de documento HTML5 -->
+<html lang="es">
+<!-- Idioma español para mejor SEO y accesibilidad -->
+
+<head>
+    <!-- Metaetiquetas esenciales -->
+    <meta charset="UTF-8">
+    <!-- Codificación de caracteres para soportar idiomas con acentos y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Viewport para diseño responsivo en dispositivos móviles -->
+
+    <!-- Metadatos para SEO y redes sociales -->
+    <title>Galería de Mascotas | Maryhug Durán</title>
+    <!-- Título descriptivo que aparece en pestañas del navegador y resultados de búsqueda -->
+    <meta name="description" content="Galería de mascotas de Maryhug Durán. Incluye fotos de Gaby y otras imágenes.">
+    <!-- Descripción para motores de búsqueda -->
+    <meta name="author" content="Maryhug Durán">
+    <!-- Autor del sitio -->
+
+    <!-- Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="Galería de Mascotas | Maryhug Durán">
+    <meta property="og:description" content="Galería fotográfica de mascotas y más.">
+    <meta property="og:type" content="website">
+
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="../css/styles-galeria.css">
+    <!-- Estilos personalizados para esta página -->
+</head>
+
+<body>
+<!-- Contenido principal de la página -->
+
+<!-- Cabecera del sitio -->
+<header role="banner">
+    <!-- Atributo role para mejorar accesibilidad -->
+    <h1>Mis Mascotas</h1>
+    <!-- Título principal de la página (solo debe haber un h1 por página) -->
+
+    <!-- Navegación principal -->
+    <nav aria-label="Navegación principal">
+        <!-- aria-label ayuda a los lectores de pantalla a identificar la navegación -->
+        <ul>
+            <li><a href="../index.html" >← Volver al Portafolio</a></li>
+            <!-- Enlace para regresar a la página principal -->
+        </ul>
+    </nav>
+</header>
+
+<!-- Contenido principal de la galería -->
+<main id="contenido-principal" role="main">
+    <!-- Atributo role e id para accesibilidad y referencia -->
+
+    <!-- Sección de galería -->
+    <section class="galeria" aria-labelledby="titulo-galeria">
+        <!-- aria-labelledby asocia el título a esta sección para accesibilidad -->
+        <h2 id="titulo-galeria" class="visually-hidden">Galería de imágenes</h2>
+        <!-- Título semántico para la sección (oculto visualmente pero accesible) -->
+
+        <!-- Contenedor de artículos/grid de imágenes -->
+        <div class="contenedor-imagenes">
+            <!-- Usamos div para contenedor de layout en lugar de section/article -->
+
+            <!-- Imagen 1: Foto local -->
+            <figure class="item-galeria">
+                <!-- Figure es más semántico para contenido de imágenes con posible caption -->
+                <img src="../assets/Gaby.jpg"
+                     alt="Retrato de Gaby, mi perro, sonriendo felizmente"
+                     width="800" height="600">
+                <!-- Atributos width y height para evitar desplazamientos de contenido (CLS) -->
+                <figcaption class="descripcion-imagen">
+                    Persona disfrutando de la lectura en un ambiente tranquilo.
+                </figcaption>
+                <!-- Figcaption proporciona contexto adicional a la imagen -->
+            </figure>
+
+            <!-- Imagen 2: Foto externa 1 -->
+            <figure class="item-galeria">
+                <img src="../assets/Gaby.jpg"
+                     alt="Paisaje montañoso al amanecer con colores cálidos"
+                     width="800" height="600"
+                     loading="lazy">
+                <!-- loading="lazy" mejora el rendimiento cargando imágenes solo cuando son visibles -->
+                <figcaption class="descripcion-imagen">
+                    Persona disfrutando de la lectura en un ambiente tranquilo.
+                </figcaption>
+            </figure>
+
+            <!-- Imagen 3: Foto externa 2 -->
+            <figure class="item-galeria">
+                <img src="../assets/Gaby.jpg"
+                     alt="Mujer sonriente leyendo un libro en un café"
+                     width="800" height="600"
+                     loading="lazy">
+                <figcaption class="descripcion-imagen">
+                    Persona disfrutando de la lectura en un ambiente tranquilo.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+</main>
+
+<!-- Pie de página -->
+<footer role="contentinfo">
+    <!-- Atributo role para indicar que es información de pie de página -->
+    <div class="contenido-footer">
+        <!-- Usamos div en lugar de section cuando no hay título jerárquico -->
+        <p>Esta galería muestra tres imágenes: la primera es una foto local de mi mascota Gaby y las otras dos provienen de Internet. Cada imagen incluye un atributo alt descriptivo para accesibilidad.</p>
+
+        <!-- Información adicional -->
+        <div class="info-adicional">
+            <p><small>&copy; <span id="current-year">2024</span> Maryhug Durán. Todos los derechos reservados.</small></p>
+            <!-- Small para información legal/copyright -->
+        </div>
+    </div>
+</footer>
+
+<!-- Script para actualizar el año actual -->
+<script>
+    // Actualiza el año en el copyright automáticamente
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentYear = new Date().getFullYear();
+        document.getElementById('current-year').textContent = currentYear;
+    });
+</script>
+</body>
+</html>

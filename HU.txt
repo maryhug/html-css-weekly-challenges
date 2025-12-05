@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio personal de [Tu Nombre]">
+    <meta name="author" content="Tu Nombre">
+    <title>Mi Portafolio Personal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado principal con navegación -->
+    <header>
+        <h1>María González</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="mascotas.html">Mis Mascotas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección: Sobre Mí -->
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <article>
+                <p>
+                    ¡Hola! Soy María, desarrolladora web apasionada por crear experiencias
+                    digitales hermosas y funcionales. Me especializo en HTML, CSS y JavaScript,
+                    y estoy constantemente aprendiendo nuevas tecnologías.
+                </p>
+                <p>
+                    Cuando no estoy programando, disfruto pasar tiempo con mis mascotas,
+                    leer libros de ciencia ficción y explorar nuevos lugares.
+                </p>
+            </article>
+        </section>
+
+        <!-- Sección: Proyectos -->
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">Sistema de Gestión de Tareas</a>
+                    <p>Aplicación web para organizar tareas diarias con recordatorios.</p>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Blog Personal Responsivo</a>
+                    <p>Blog diseñado con CSS Grid y Flexbox, optimizado para móviles.</p>
+                </li>
+                <li>
+                    <a href="#" target="_blank">Galería de Fotografías</a>
+                    <p>Galería interactiva con efectos de transición y lightbox.</p>
+                </li>
+                <li>
+                    <a href="mascotas.html">Página de Mis Mascotas</a>
+                    <p>Galería dedicada a mis adorables compañeros peludos.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Sección: Contacto -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 María González. Todos los derechos reservados.</p>
+        <p>
+            <a href="mailto:maria@ejemplo.com">maria@ejemplo.com</a> |
+            <a href="tel:+123456789">+1 234 567 89</a>
+        </p>
+    </footer>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de mis adorables mascotas">
+    <title>Mis Mascotas - Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado de la página de mascotas -->
+    <header>
+        <h1>Mis Mascotas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">← Volver al Portafolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introducción -->
+        <section class="intro-mascotas">
+            <p>
+                Estos son mis compañeros más fieles. Cada uno tiene su propia personalidad
+                única y llenan mi vida de alegría todos los días.
+            </p>
+        </section>
+
+        <!-- Galería de mascotas -->
+        <section class="galeria-mascotas">
+            <!-- Mascota 1 -->
+            <figure class="mascota">
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&h=400&fit=crop"
+                     alt="Luna, una golden retriever">
+                <figcaption>
+                    <h3>Luna</h3>
+                    <p>
+                        Luna es una Golden Retriever de 3 años. Le encanta nadar,
+                        jugar a buscar la pelota y dar largos paseos por el parque.
+                        Es increíblemente cariñosa y siempre está lista para dar amor.
+                    </p>
+                </figcaption>
+            </figure>
+
+            <!-- Mascota 2 -->
+            <figure class="mascota">
+                <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&h=400&fit=crop"
+                     alt="Michi, un gato naranja">
+                <figcaption>
+                    <h3>Michi</h3>
+                    <p>
+                        Michi es un gato atigrado de 5 años con una personalidad independiente
+                        pero adorable. Pasa la mayor parte del día tomando siestas en lugares
+                        soleados y persiguiendo juguetes por la noche.
+                    </p>
+                </figcaption>
+            </figure>
+
+            <!-- Mascota 3 -->
+            <figure class="mascota">
+                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=400&fit=crop"
+                     alt="Max, un husky siberiano">
+                <figcaption>
+                    <h3>Max</h3>
+                    <p>
+                        Max es un Husky Siberiano de 2 años lleno de energía.
+                        Es muy activo, ama correr y tiene los ojos azules más hermosos.
+                        Es un poco travieso pero imposible de no querer.
+                    </p>
+                </figcaption>
+            </figure>
+
+            <!-- Mascota 4 (Bonus) -->
+            <figure class="mascota">
+                <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=400&h=400&fit=crop"
+                     alt="Coco, un conejo blanco">
+                <figcaption>
+                    <h3>Coco</h3>
+                    <p>
+                        Coco es una conejita Holland Lop de 1 año. Es tímida al principio
+                        pero muy juguetona cuando toma confianza. Le encantan las zanahorias
+                        y saltar por toda la casa.
+                    </p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Enlace de retorno -->
+        <section class="volver">
+            <a href="index.html" class="btn-volver">← Regresar al Portafolio Principal</a>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 María González. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------
+/* ==========================================
+   ESTILOS GLOBALES
+   ========================================== */
+
+/* Reset básico y configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #4a1942;
+    background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+    min-height: 100vh;
+}
+
+/* ==========================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================== */
+
+header {
+    background: linear-gradient(135deg, #d81b60 0%, #8e24aa 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(142, 36, 170, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Efecto hover en navegación */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   CONTENIDO PRINCIPAL
+   ========================================== */
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: white;
+    margin: 2rem 0;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(216, 27, 96, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(142, 36, 170, 0.25);
+}
+
+section h2 {
+    color: #8e24aa;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #d81b60;
+    padding-bottom: 0.5rem;
+}
+
+/* ==========================================
+   SECCIÓN: SOBRE MÍ
+   ========================================== */
+
+#sobre-mi article p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: #6a1b5a;
+}
+
+/* ==========================================
+   SECCIÓN: PROYECTOS
+   ========================================== */
+
+#proyectos ul {
+    list-style: none;
+}
+
+#proyectos li {
+    background: linear-gradient(135deg, #f8bbd0 0%, #e1bee7 100%);
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 5px solid #d81b60;
+    transition: all 0.3s ease;
+}
+
+#proyectos li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 12px rgba(216, 27, 96, 0.3);
+}
+
+#proyectos li a {
+    color: #8e24aa;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+#proyectos li a:hover {
+    color: #d81b60;
+    text-decoration: underline;
+}
+
+#proyectos li p {
+    margin-top: 0.5rem;
+    color: #6a1b5a;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   SECCIÓN: CONTACTO - FORMULARIO
+   ========================================== */
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #8e24aa;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 2px solid #e1bee7;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #fce4ec;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #d81b60;
+    box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.1);
+    background-color: white;
+}
+
+/* Botón del formulario */
+button[type="submit"] {
+    background: linear-gradient(135deg, #d81b60 0%, #8e24aa 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(142, 36, 170, 0.3);
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(142, 36, 170, 0.4);
+}
+
+/* ==========================================
+   PÁGINA DE MASCOTAS
+   ========================================== */
+
+.intro-mascotas {
+    background: linear-gradient(135deg, #f8bbd0 0%, #e1bee7 100%);
+    text-align: center;
+    font-size: 1.1rem;
+    color: #6a1b5a;
+}
+
+/* Galería de mascotas */
+.galeria-mascotas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.mascota {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(142, 36, 170, 0.2);
+    transition: all 0.3s ease;
+}
+
+.mascota:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(216, 27, 96, 0.3);
+}
+
+/* Imágenes de mascotas */
+.mascota img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 4px solid #d81b60;
+    transition: transform 0.3s ease;
+}
+
+.mascota:hover img {
+    transform: scale(1.1);
+}
+
+/* Descripción de mascotas */
+.mascota figcaption {
+    padding: 1.5rem;
+}
+
+.mascota h3 {
+    color: #8e24aa;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.mascota p {
+    color: #6a1b5a;
+    line-height: 1.6;
+}
+
+/* Sección de volver */
+.volver {
+    text-align: center;
+    padding: 2rem;
+}
+
+.btn-volver {
+    display: inline-block;
+    background: linear-gradient(135deg, #d81b60 0%, #8e24aa 100%);
+    color: white;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(142, 36, 170, 0.3);
+}
+
+.btn-volver:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(142, 36, 170, 0.4);
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+   ========================================== */
+
+footer {
+    background: linear-gradient(135deg, #8e24aa 0%, #d81b60 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #fce4ec;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .galeria-mascotas {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+----------------------------------------------------------------------------------------------------------------
