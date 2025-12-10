@@ -1,4 +1,8 @@
 /* ================================================
+   PORTAFOLIO SEMANA 2 - CSS CON FLEXBOX Y GRID
+   ================================================ */
+
+/* ================================================
    RESET Y CONFIGURACIÓN BÁSICA
    ================================================ */
 
@@ -28,7 +32,7 @@ body {
 }
 
 /* ================================================
-   HEADER - Encabezado y Navegación
+   HEADER - Encabezado con FLEXBOX (TASK 2)
    ================================================ */
 
 header {
@@ -40,31 +44,61 @@ header {
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     /* Sombra sutil debajo del header */
+
+    /* FLEXBOX: Convierte el header en contenedor flexible */
+    display: flex;
+    flex-direction: column;
+    /* Coloca h1 y nav uno debajo del otro */
+    align-items: center;
+    /* Centra horizontalmente todos los elementos hijos */
+    gap: 1rem;
+    /* Espacio entre el h1 y el nav */
 }
 
 header h1 {
     font-size: 2.5rem;
     /* Tamaño grande para el nombre */
-    margin-bottom: 1rem;
+    margin: 0;
+    /* Eliminamos margin porque usamos gap en el padre */
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     /* Sombra del texto para profundidad */
 }
 
-/* Navegación */
+/* ================================================
+   NAVEGACIÓN - Mejorada con FLEXBOX (TASK 2)
+   ================================================ */
+
+/* Contenedor del nav */
+nav {
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+}
+
+/* Lista de navegación convertida en contenedor FLEX */
 nav ul {
     list-style: none;
     /* Elimina los puntos de la lista */
+
+    /* FLEXBOX: Propiedades principales */
     display: flex;
-    /* Coloca los elementos en fila */
+    /* Activa Flexbox en la lista */
     justify-content: center;
-    /* Centra los elementos horizontalmente */
-    gap: 2rem;
-    /* Espacio entre cada elemento del menú */
+    /* Distribuye los enlaces centrados horizontalmente */
+    align-items: center;
+    /* Centra verticalmente los elementos */
     flex-wrap: wrap;
     /* Permite que los elementos bajen de línea en pantallas pequeñas */
+    gap: 2rem;
+    /* Espacio uniforme entre cada elemento del menú */
 }
 
+/* Items individuales de la lista */
+nav li {
+    /* Los <li> son flex items automáticamente */
+}
+
+/* Enlaces de navegación */
 nav a {
     color: white;
     text-decoration: none;
@@ -76,6 +110,8 @@ nav a {
     /* Bordes redondeados */
     transition: all 0.3s ease;
     /* Animación suave para todos los cambios */
+    display: inline-block;
+    /* Necesario para aplicar transform */
 }
 
 nav a:hover {
@@ -90,15 +126,15 @@ nav a:hover {
    ================================================ */
 
 main {
-    max-width: 1000px;
-    /* Ancho máximo para mejor legibilidad */
+    max-width: 1200px;
+    /* Ancho máximo aumentado para aprovechar el grid */
     margin: 2rem auto;
     /* Centra el contenido con margen automático a los lados */
     padding: 0 2rem;
     /* Espaciado interno a los lados */
 }
 
-/* Secciones */
+/* Secciones generales */
 section {
     background-color: white;
     margin-bottom: 2rem;
@@ -136,53 +172,121 @@ p {
 }
 
 /* ================================================
-   SECCIÓN DE PROYECTOS
+   SECCIÓN DE PROYECTOS - CSS GRID (TASK 3)
    ================================================ */
 
-#proyectos ul {
-    list-style: none;
-    /* Sin puntos en la lista */
+/* Contenedor GRID para las tarjetas de proyectos */
+.proyectos-grid {
+    /* GRID LAYOUT: Configuración principal */
+    display: grid;
+    /* Activa CSS Grid Layout */
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Crea columnas que se ajustan automáticamente:
+       - repeat(): repite el patrón
+       - auto-fit: crea tantas columnas como quepan
+       - minmax(300px, 1fr): cada columna mínimo 300px, máximo flexible
+       - 1fr: fracción flexible del espacio disponible */
+
+    gap: 2rem;
+    /* Espacio entre las tarjetas (horizontal y vertical) */
+
+    /* Alineación del contenido */
+    align-items: stretch;
+    /* Hace que todas las tarjetas tengan la misma altura */
 }
 
-#proyectos li {
+/* Tarjetas individuales de proyectos */
+.proyecto-card {
     background-color: #f9f9f9;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
+    padding: 2rem;
     border-radius: 8px;
     border-left: 4px solid #D4A5A5;
     /* Borde izquierdo de color pastel rosa */
     transition: all 0.3s ease;
+
+    /* Cada tarjeta es un grid item automáticamente */
+    display: flex;
+    flex-direction: column;
+    /* Organiza el contenido interno verticalmente */
+    gap: 1rem;
 }
 
-#proyectos li:hover {
+.proyecto-card:hover {
     background-color: #f0f0f0;
-    transform: translateX(10px);
-    /* Desplaza hacia la derecha al hacer hover */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    /* Levanta la tarjeta al hacer hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-#proyectos a {
+/* Títulos dentro de las tarjetas */
+.proyecto-card h3 {
+    color: #B4A7D6;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Enlaces dentro de las tarjetas */
+.proyecto-card a {
     color: #B4A7D6;
     text-decoration: none;
-    font-size: 1.3rem;
     font-weight: 600;
-    display: block;
-    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
 }
 
-#proyectos a:hover {
+.proyecto-card a:hover {
     color: #9B8BC4;
     text-decoration: underline;
 }
 
-#proyectos p {
+/* Párrafos dentro de las tarjetas */
+.proyecto-card p {
     color: #666;
     font-size: 1rem;
     margin: 0;
+    text-align: left;
+    /* Sobrescribe el justify de los párrafos generales */
 }
 
 /* ================================================
-   FORMULARIO DE CONTACTO
+   VARIANTE: Grid con columnas fijas (opcional)
+   Descomenta este código si prefieres 3 columnas fijas
+   ================================================ */
+
+/*
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+*/
+
+/* ================================================
+   VARIANTE: Grid con grid-template-areas (opcional)
+   Para layouts más complejos con áreas específicas
+   ================================================ */
+
+/*
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    grid-template-areas:
+        "proyecto1 proyecto2 proyecto3"
+        "proyecto4 proyecto5 proyecto6";
+}
+
+.proyecto-card:nth-child(1) { grid-area: proyecto1; }
+.proyecto-card:nth-child(2) { grid-area: proyecto2; }
+.proyecto-card:nth-child(3) { grid-area: proyecto3; }
+.proyecto-card:nth-child(4) { grid-area: proyecto4; }
+.proyecto-card:nth-child(5) { grid-area: proyecto5; }
+.proyecto-card:nth-child(6) { grid-area: proyecto6; }
+*/
+
+/* ================================================
+   FORMULARIO DE CONTACTO - Con FLEXBOX
    ================================================ */
 
 form {
@@ -196,6 +300,7 @@ form {
 .form-group {
     display: flex;
     flex-direction: column;
+    /* Label arriba, input abajo */
 }
 
 label {
@@ -245,7 +350,7 @@ button[type="submit"] {
     /* Cambia el cursor a manita al pasar sobre el botón */
     transition: all 0.3s ease;
     align-self: flex-start;
-    /* Alinea el botón a la izquierda */
+    /* Alinea el botón a la izquierda dentro del contenedor flex */
 }
 
 button[type="submit"]:hover {
@@ -290,5 +395,73 @@ footer a:hover {
 }
 
 /* ================================================
-   FIN DEL CSS
+   RESPONSIVE DESIGN - Media Queries
+   ================================================ */
+
+/* Tablets (hasta 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* Navegación */
+    nav ul {
+        gap: 1rem;
+        /* Reduce el espacio en pantallas pequeñas */
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Grid de proyectos se ajusta automáticamente por auto-fit */
+    .proyectos-grid {
+        gap: 1.5rem;
+    }
+
+    /* Secciones */
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Móviles (hasta 480px) */
+@media (max-width: 480px) {
+    /* Header */
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Navegación en columna para móviles */
+    nav ul {
+        flex-direction: column;
+        /* Cambia a disposición vertical */
+        gap: 0.5rem;
+    }
+
+    /* Grid de proyectos */
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        /* Una sola columna en móviles */
+        gap: 1rem;
+    }
+
+    /* Main */
+    main {
+        padding: 0 1rem;
+    }
+}
+
+/* ================================================
+   FIN DEL CSS - SEMANA 2
    ================================================ */

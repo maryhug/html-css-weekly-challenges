@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/* ================================================
+   PÁGINA DE MASCOTAS - SEMANA 2
+   CON FLEXBOX Y CSS GRID (TASK 4)
+   ================================================ */
 
+/* Importa la fuente Quicksand desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 /* ================================================
    RESET Y CONFIGURACIÓN BÁSICA
@@ -9,7 +14,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Evita que padding y border aumenten el tamaño total */
+    box-sizing: border-box;
+    /* Evita que padding y border aumenten el tamaño total */
 }
 
 /* Suaviza el desplazamiento al navegar entre secciones */
@@ -19,52 +25,106 @@ html {
 
 /* Configuración general del cuerpo del sitio */
 body {
-    font-family: "Quicksand", sans-serif; /* Fuente limpia */
-    line-height: 1.8; /* Altura de línea para mejorar legibilidad */
-    color: #444; /* Texto gris oscuro */
-    background-color: #F9F9F9; /* Fondo gris claro suave */
+    font-family: "Quicksand", sans-serif;
+    /* Fuente limpia */
+    line-height: 1.8;
+    /* Altura de línea para mejorar legibilidad */
+    color: #444;
+    /* Texto gris oscuro */
+    background-color: #F9F9F9;
+    /* Fondo gris claro suave */
 }
 
 /* ================================================
-   HEADER - Minimalista
+   HEADER - Con FLEXBOX
    ================================================ */
 
 /* Contenedor del encabezado */
 header {
-    background-color: #E8E4F3; /* Lavanda pastel */
-    padding: 3rem 0; /* Espaciado vertical */
-    text-align: center; /* Centra texto e items */
-    border-bottom: 1px solid #D8D4E3; /* Línea sutil inferior */
+    background-color: #E8E4F3;
+    /* Lavanda pastel */
+    padding: 3rem 0;
+    /* Espaciado vertical */
+    text-align: center;
+    /* Centra texto */
+    border-bottom: 1px solid #D8D4E3;
+    /* Línea sutil inferior */
+
+    /* FLEXBOX: Organiza el contenido del header */
+    display: flex;
+    flex-direction: column;
+    /* h1 y nav uno debajo del otro */
+    align-items: center;
+    /* Centra horizontalmente */
+    gap: 1.5rem;
+    /* Espacio entre elementos */
 }
 
 /* Título principal */
 header h1 {
-    font-size: 2.5rem; /* Tamaño grande */
-    font-weight: 300; /* Estilo ligero para look minimalista */
-    color: #6B6B6B; /* Gris suave */
-    letter-spacing: 2px; /* Espaciado entre letras */
+    font-size: 2.5rem;
+    /* Tamaño grande */
+    font-weight: 300;
+    /* Estilo ligero para look minimalista */
+    color: #6B6B6B;
+    /* Gris suave */
+    letter-spacing: 2px;
+    /* Espaciado entre letras */
+    margin: 0;
 }
+
+/* Navegación */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem; /* Espacio vertical entre los botones */
+}
+
 
 /* Lista del menú de navegación */
 nav ul {
-    list-style: none; /* Sin viñetas */
-    margin-top: 1.5rem; /* Separación respecto al título */
+    list-style: none;
+    /* Sin viñetas */
+    /* FLEXBOX: Para la navegación */
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
 }
 
 /* Enlaces del menú */
 nav a {
-    color: #888; /* Gris suave */
-    text-decoration: none; /* Quita subrayado */
-    font-weight: 300; /* Ligero */
+    color: #888;
+    /* Gris suave */
+    text-decoration: none;
+    /* Quita subrayado */
+    font-weight: 400;
+    /* Un poco más de peso */
     font-size: 1rem;
-    padding: 0.5rem 1rem; /* Espaciado clickeable */
-    transition: color 0.3s ease; /* Suaviza el hover */
+    padding: 0.5rem 1.5rem;
+    /* Más espaciado horizontal */
+    transition: all 0.3s ease;
+    /* Suaviza todos los cambios en hover */
+    border: 1px solid #D8D4E3;
+    /* Borde lavanda sutil */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    background-color: #F4F1FA;
+    /* Fondo lavanda muy claro */
 }
 
 /* Efecto al pasar el mouse */
 nav a:hover {
-    color: #B4A7D6; /* Lavanda más fuerte */
+    color: #6A5A94;
+    /* Texto lavanda más oscuro */
+    background-color: #E8E4F3;
+    /* Fondo lavanda más notorio */
+    border-color: #B4A7D6;
+    /* Borde lavanda más oscuro */
 }
+
 
 /* ================================================
    MAIN - Contenido Principal
@@ -72,81 +132,237 @@ nav a:hover {
 
 /* Contenedor general del contenido principal */
 main {
-    max-width: 1100px; /* Ancho máximo para lectura óptima */
-    margin: 20px auto; /* Centrado horizontal y margen superior/inferior */
-    padding: 0 2rem; /* Espaciado lateral */
+    max-width: 1400px;
+    /* Ancho máximo ampliado para las galerías */
+    margin: 20px auto;
+    /* Centrado horizontal y margen superior/inferior */
+    padding: 0 2rem;
+    /* Espaciado lateral */
 }
 
 /* ================================================
-   SECCIÓN INTRODUCCIÓN - Minimalista
+   SECCIÓN INTRODUCCIÓN
    ================================================ */
 
 /* Contenedor de la introducción */
 .intro-mascotas {
-    padding: 10px 0;
-    margin-bottom: 30px; /* Separación respecto a siguiente sección */
+    padding: 20px 0;
+    margin-bottom: 40px;
+    /* Separación respecto a siguiente sección */
     text-align: center;
-    border-bottom: 1px solid #E5E5E5; /* Línea inferior sutil */
+    border-bottom: 1px solid #E5E5E5;
+    /* Línea inferior sutil */
 }
 
 /* Párrafo principal de presentación */
 .intro-mascotas p {
     font-size: 1.1rem;
     color: #666;
-    font-weight: 300; /* Ligero */
-    max-width: 700px; /* Evita textos muy largos */
-    margin: 0 auto; /* Centrado */
+    font-weight: 300;
+    /* Ligero */
+    max-width: 700px;
+    /* Evita textos muy largos */
+    margin: 0 auto;
+    /* Centrado */
 }
 
 /* ================================================
-   GALERÍA DE MASCOTAS - Grid Minimalista
+   TÍTULOS DE GALERÍA
    ================================================ */
 
-/* Grid que contiene todos los elementos mascota */
-.galeria-mascotas {
-    display: grid; /* Activa Grid Layout */
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-    gap: 2.5rem; /* Separación entre tarjetas */
+.galeria-titulo {
+    color: #9B8BC4;
+    /* Lavanda suave */
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #E8E4F3;
+}
+
+/* ================================================
+   GALERÍA CON FLEXBOX (TASK 4)
+   ================================================ */
+
+/* Sección contenedora de la galería flex */
+.galeria-mascotas-flex {
+    margin-bottom: 5rem;
+    /* Separación con la siguiente sección */
+}
+
+/* Contenedor FLEXBOX para las tarjetas */
+.galeria-flex-container {
+    /* FLEXBOX: Propiedades principales */
+    display: flex;
+    /* Activa Flexbox */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas bajen de línea */
+    justify-content: center;
+    /* Centra las tarjetas horizontalmente */
+    align-items: stretch;
+    /* Hace que todas tengan la misma altura */
+    gap: 2rem;
+    /* Espacio entre tarjetas (horizontal y vertical) */
+}
+
+/* Cada tarjeta de mascota en Flexbox */
+.galeria-flex-container .mascota {
+    /* Flex item: controla el tamaño */
+    flex: 1 1 300px;
+    /* flex-grow: 1 (puede crecer)
+       flex-shrink: 1 (puede encogerse)
+       flex-basis: 300px (tamaño base mínimo) */
+
+    max-width: 350px;
+    /* Ancho máximo para que no crezcan demasiado */
+
+    background-color: white;
+    border-radius: 12px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Evita desbordes de la imagen */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    /* Sombra suave */
+    transition: all 0.3s ease;
+    /* Suaviza hover */
+    border: 1px solid #E8E4F3;
+    /* Borde lavanda claro */
+
+    /* Organiza el contenido interno con flexbox */
+    display: flex;
+    flex-direction: column;
+    /* Imagen arriba, texto abajo */
+}
+
+/* ================================================
+   GALERÍA CON CSS GRID (TASK 4)
+   ================================================ */
+
+/* Sección contenedora de la galería grid */
+.galeria-mascotas-grid {
     margin-bottom: 4rem;
 }
 
-/* Cada tarjeta de mascota */
-.mascota {
-    background-color: white;
-    border-radius: 12px; /* Bordes redondeados */
-    overflow: hidden; /* Evita desbordes de la imagen */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* Sombra suave */
-    transition: all 0.3s ease; /* Suaviza hover */
-    border: 1px solid #E8E4F3; /* Borde lavanda claro */
+/* Contenedor CSS GRID para las tarjetas */
+.galeria-grid-container {
+    /* GRID LAYOUT: Propiedades principales */
+    display: grid;
+    /* Activa CSS Grid */
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* repeat(): repite el patrón de columnas
+       auto-fit: crea tantas columnas como quepan en el espacio disponible
+       minmax(280px, 1fr): cada columna tiene mínimo 280px, máximo 1 fracción flexible
+       El grid se ajusta automáticamente según el ancho de la pantalla */
+
+    gap: 2rem;
+    /* Espacio entre las celdas del grid (filas y columnas) */
+
+    align-items: stretch;
+    /* Las tarjetas se estiran para tener la misma altura */
 }
+
+/* Cada tarjeta de mascota en Grid */
+.galeria-grid-container .mascota {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 1px solid #E8E4F3;
+
+    /* Organiza el contenido interno */
+    display: flex;
+    flex-direction: column;
+    /* Imagen arriba, texto abajo */
+}
+
+/* ================================================
+   VARIANTE DE GRID: Columnas fijas (opcional)
+   Descomenta para usar 3 columnas fijas
+   ================================================ */
+
+/*
+.galeria-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+*/
+
+/* ================================================
+   VARIANTE DE GRID: Mosaico irregular (opcional)
+   Descomenta para crear un layout tipo Pinterest
+   ================================================ */
+
+/*
+.galeria-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    gap: 1.5rem;
+}
+
+.galeria-grid-container .mascota:nth-child(3n) {
+    grid-row: span 2;
+}
+
+.galeria-grid-container .mascota:nth-child(4n) {
+    grid-column: span 2;
+}
+*/
+
+/* ================================================
+   ESTILOS COMUNES PARA TARJETAS DE MASCOTAS
+   (Se aplican tanto a Flexbox como a Grid)
+   ================================================ */
 
 /* Efecto flotante al pasar el mouse */
 .mascota:hover {
-    transform: translateY(-8px); /* Levanta la tarjeta */
-    box-shadow: 0 8px 20px rgba(155, 139, 196, 0.15); /* Sombra más profunda */
+    transform: translateY(-8px);
+    /* Levanta la tarjeta */
+    box-shadow: 0 8px 20px rgba(155, 139, 196, 0.15);
+    /* Sombra más profunda */
 }
 
 /* Imágenes dentro de las tarjetas */
 .mascota img {
-    width: 100%; /* Ocupa todo el ancho */
-    height: 300px; /* Altura uniforme */
-    object-fit: cover; /* Asegura que no se deforme */
-    display: block; /* Quita espacios fantasma */
+    width: 100%;
+    /* Ocupa todo el ancho */
+    height: 300px;
+    /* Altura uniforme */
+    object-fit: cover;
+    /* Asegura que no se deforme */
+    display: block;
+    /* Quita espacios fantasma */
 }
 
 /* Contenedor de texto debajo de la imagen */
 figcaption {
     padding: 1.8rem 1.5rem;
     text-align: center;
-    background-color: #FAFAFA; /* Gris casi blanco */
+    background-color: #FAFAFA;
+    /* Gris casi blanco */
+
+    /* Crece para ocupar el espacio disponible */
+    flex: 1;
+
+    /* Organiza el contenido interno */
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 /* Nombre de la mascota */
 figcaption h3 {
-    color: #9B8BC4; /* Lavanda suave */
+    color: #9B8BC4;
+    /* Lavanda suave */
     font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-    font-weight: 500; /* Semibold para destacar */
+    margin: 0;
+    font-weight: 500;
+    /* Semibold para destacar */
 }
 
 /* Descripción de la mascota */
@@ -155,47 +371,17 @@ figcaption p {
     font-size: 0.95rem;
     line-height: 1.6;
     font-weight: 300;
+    margin: 0;
 }
 
 /* ================================================
-   SECCIÓN VOLVER - Minimalista
-   ================================================ */
-
-/* Contenedor del botón volver */
-.volver {
-    text-align: center;
-    margin: 4rem 0;
-    padding-top: 2rem;
-    border-top: 1px solid #E5E5E5;
-}
-
-/* Estilo del botón volver */
-.btn-volver {
-    display: inline-block;
-    background-color: transparent;
-    color: #9B8BC4;
-    padding: 0.8rem 2rem;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 300;
-    border: 1px solid #9B8BC4;
-    border-radius: 3px;
-    transition: all 0.3s ease; /* Hover suave */
-}
-
-/* Hover del botón volver */
-.btn-volver:hover {
-    background-color: #9B8BC4; /* Rellena con lavanda */
-    color: white;
-}
-
-/* ================================================
-   FOOTER - Minimalista
+   FOOTER - Pie de Página
    ================================================ */
 
 /* Pie de página general */
 footer {
-    background-color: transparent; /* Sin color */
+    background-color: transparent;
+    /* Sin color */
     color: #999;
     text-align: center;
     padding: 2rem 0;
@@ -209,3 +395,7 @@ footer p {
     font-size: 0.9rem;
     font-weight: 300;
 }
+
+/* ================================================
+   FIN DEL CSS - SEMANA 2
+   ================================================ */

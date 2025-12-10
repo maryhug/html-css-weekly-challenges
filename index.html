@@ -19,7 +19,7 @@
     <meta name="author" content="Maryhug Durán">
     <!-- Identifica al autor de la página -->
 
-    <title>Mi Portafolio Personal</title>
+    <title>Mi Portafolio Personal - Semana 2</title>
     <!-- Título que aparece en la pestaña del navegador -->
 
     <link rel="stylesheet" href="/css/styles-index.css">
@@ -31,6 +31,7 @@
 
 <!-- ============================================ -->
 <!-- HEADER: Encabezado principal con navegación -->
+<!-- MEJORADO CON FLEXBOX (TASK 2) -->
 <!-- ============================================ -->
 <header>
     <!-- <header> es una etiqueta semántica para el encabezado de la página -->
@@ -40,9 +41,11 @@
 
     <nav>
         <!-- <nav> indica que esta sección contiene enlaces de navegación -->
+        <!-- Ahora usa FLEXBOX para alineación y distribución horizontal -->
 
         <ul>
             <!-- <ul> es una lista no ordenada (sin números) -->
+            <!-- Convertida en contenedor flex con justify-content y align-items -->
 
             <li><a href="#sobre-mi">Sobre Mí</a></li>
             <!-- <li> es un elemento de la lista -->
@@ -93,44 +96,46 @@
 
     <!-- ================================ -->
     <!-- SECCIÓN 2: Proyectos -->
+    <!-- MEJORADO CON CSS GRID (TASK 3) -->
     <!-- ================================ -->
     <section id="proyectos">
         <!-- Esta sección tiene el id="proyectos" para que el menú pueda enlazar aquí -->
+        <!-- Ahora usa CSS GRID para organizar las tarjetas de proyectos -->
 
         <h2>Mis Proyectos</h2>
         <!-- Subtítulo de la sección -->
 
-        <ul>
-            <!-- Lista no ordenada de proyectos -->
+        <div class="proyectos-grid">
+            <!-- Contenedor GRID para las tarjetas de proyectos -->
+            <!-- Se aplica display: grid, grid-template-columns y gap en CSS -->
 
-            <li>
-                <!-- Primer proyecto -->
-                <a href="pages/galeria.html" target="_blank">Galería de Fotografías</a>
-                <!-- href="#" es un enlace temporal (placeholder) -->
-                <!-- target="_blank" hace que se abra en una nueva pestaña -->
-
+            <!-- Tarjeta de Proyecto 1 -->
+            <article class="proyecto-card">
+                <h3>
+                    <a href="pages/galeria.html">Galería de Fotografías</a>
+                    <!-- target="_blank" hace que se abra en una nueva pestaña -->
+                </h3>
                 <p>Galería interactiva con efectos de transición y lightbox.</p>
                 <!-- Descripción del proyecto -->
-            </li>
+            </article>
 
-            <li>
-                <!-- Segundo proyecto -->
-                <a href="pages/mascotas.html">Página de Mis Mascotas</a>
-                <!-- Este enlace apunta a otro archivo HTML en la misma carpeta -->
-                <!-- NO tiene target="_blank", así que se abre en la misma pestaña -->
-
+            <!-- Tarjeta de Proyecto 2 -->
+            <article class="proyecto-card">
+                <h3>
+                    <a href="pages/mascotas.html">Página de Mis Mascotas</a>
+                    <!-- Este enlace apunta a otro archivo HTML -->
+                </h3>
                 <p>Galería dedicada a mis adorables compañeros peludos.</p>
-            </li>
+            </article>
 
-            <li>
-                <!-- Segundo proyecto -->
-                <a href="pages/biografia.html">Página de Biografia</a>
-                <!-- Este enlace apunta a otro archivo HTML en la misma carpeta -->
-                <!-- NO tiene target="_blank", así que se abre en la misma pestaña -->
-
-                <p>Ejercicio de biografia simple.</p>
-            </li>
-        </ul>
+            <!-- Tarjeta de Proyecto 3 -->
+            <article class="proyecto-card">
+                <h3>
+                    <a href="pages/biografia.html">Página de Biografía</a>
+                </h3>
+                <p>Ejercicio de biografía simple con información personal.</p>
+            </article>
+        </div>
     </section>
 
     <!-- ================================ -->
